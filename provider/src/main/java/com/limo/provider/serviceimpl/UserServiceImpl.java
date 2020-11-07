@@ -1,17 +1,19 @@
 package com.limo.provider.serviceimpl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.limo.provider.entity.AdminUser;
 import com.limo.provider.mapper.AdminUserMapper;
 import com.limo.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * @author lib97
+ *
+ * 使用dubbo的@Service暴露服务，如果不使用就不显示为提供者
  */
 @Service
 public class UserServiceImpl implements UserService {
